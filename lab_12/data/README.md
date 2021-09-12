@@ -13,4 +13,4 @@
 | `tesla.csv` | Tesla stock's opening, high, low, and closing price daily, along with volume traded and adjusted close for 2019 through 2020. | The `stock_analysis` package. |
 
 ### Source
-The [`stock_analysis`](https://github.com/stefmolin/stock-analysis) package contains easy to use interfaces for basic technical analysis of stocks. In this chapter, we will walk through the construction of this package.
+The [`stock_analysis`](https://github.com/fenago/stock-analysis) package contains easy to use interfaces for basic technical analysis of stocks. In this chapter, we will walk through the construction of this package.
