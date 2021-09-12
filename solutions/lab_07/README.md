@@ -1,3 +1,3 @@
-# Chapter 7 Solutions
+# Chapter 2 Solutions
 
-The end-of-chapter exercises focused on using the [`stock_analysis`](https://github.com/fenago/stock-analysis) package to practice conducting financial analysis. The solutions can all be found in [`solutions.ipynb`](./solutions.ipynb).
+The end-of-chapter exercises focused on getting used to working with `DataFrame` objects. The solutions can all be found in [`solutions.ipynb`](./solutions.ipynb).
