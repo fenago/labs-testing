@@ -14,4 +14,4 @@ public class HelloWorldAction {
 	   public void setName(String name) {
 	      this.name = name;
 	   }
-	}
+}
