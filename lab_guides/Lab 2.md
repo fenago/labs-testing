@@ -42,7 +42,7 @@ public interface Action {
 Let us take a look at the action method in the Hello World example −
 
 ```
-package com.tutorialspoint.struts2;
+package com.fenago.struts2;
 
 public class HelloWorldAction {
    private String name;
@@ -66,7 +66,7 @@ make the following change to the **execute** method and extend the class
 ActionSupport as follows −
 
 ```
-package com.tutorialspoint.struts2;
+package com.fenago.struts2;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -108,7 +108,7 @@ as follows −
    <constant name = "struts.devMode" value = "true" />
    <package name = "helloworld" extends = "struts-default">
       <action name = "hello" 
-         class = "com.tutorialspoint.struts2.HelloWorldAction"
+         class = "com.fenago.struts2.HelloWorldAction"
          method = "execute">
          <result name = "success">/HelloWorld.jsp</result>
          <result name = "error">/AccessDenied.jsp</result>
@@ -222,7 +222,7 @@ requests and to provide different URLs to the users, accordingly you
 will define different classes as defined below −
 
 ```
-package com.tutorialspoint.struts2;
+package com.fenago.struts2;
 import com.opensymphony.xwork2.ActionSupport;
 
 class MyAction extends ActionSupport {
@@ -261,14 +261,14 @@ You will configure these actions in struts.xml file as follows −
    
    <package name = "helloworld" extends = "struts-default">
       <action name = "hello" 
-         class = "com.tutorialspoint.struts2.HelloWorld" 
+         class = "com.fenago.struts2.HelloWorld" 
          method = "execute">
          <result name = "success">/HelloWorld.jsp</result>
          <result name = "error">/AccessDenied.jsp</result>
       </action>
       
       <action name = "something" 
-         class = "com.tutorialspoint.struts2.SomeOtherClass" 
+         class = "com.fenago.struts2.SomeOtherClass" 
          method = "execute">
          <result name = "success">/Something.jsp</result>
          <result name = "error">/AccessDenied.jsp</result>

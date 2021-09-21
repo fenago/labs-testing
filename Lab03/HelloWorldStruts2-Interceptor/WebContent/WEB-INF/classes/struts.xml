@@ -7,7 +7,7 @@
    
    <package name = "helloworld" extends = "struts-default">
       <action name = "hello" 
-         class = "com.tutorialspoint.struts2.HelloWorldAction"
+         class = "com.fenago.struts2.HelloWorldAction"
          method = "execute">
          <interceptor-ref name = "params"/>
          <interceptor-ref name = "timer" />

@@ -170,7 +170,7 @@ let us modify the **struts.xml** file to add an interceptor as follows −
    
    <package name = "helloworld" extends = "struts-default">
       <action name = "hello" 
-         class = "com.tutorialspoint.struts2.HelloWorldAction"
+         class = "com.fenago.struts2.HelloWorldAction"
          method = "execute">
          <interceptor-ref name = "params"/>
          <interceptor-ref name = "timer" />
@@ -239,7 +239,7 @@ Let us create the following MyInterceptor.java in **Java Resources \>
 src** folder −
 
 ```
-package com.tutorialspoint.struts2;
+package com.fenago.struts2;
 
 import java.util.*;
 import com.opensymphony.xwork2.ActionInvocation;
@@ -283,11 +283,11 @@ Create Action Class
 -------------------
 
 Let us create a java file HelloWorldAction.java under **Java Resources
-\> src** with a package name **com.tutorialspoint.struts2** with the
+\> src** with a package name **com.fenago.struts2** with the
 contents given below.
 
 ```
-package com.tutorialspoint.struts2;
+package com.fenago.struts2;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -390,11 +390,11 @@ example. But here let us register and use it as follows −
 
       <interceptors>
          <interceptor name = "myinterceptor"
-            class = "com.tutorialspoint.struts2.MyInterceptor" />
+            class = "com.fenago.struts2.MyInterceptor" />
       </interceptors>
 
       <action name = "hello" 
-         class = "com.tutorialspoint.struts2.HelloWorldAction" 
+         class = "com.fenago.struts2.HelloWorldAction" 
          method = "execute">
          <interceptor-ref name = "params"/>
          <interceptor-ref name = "myinterceptor" />
@@ -493,7 +493,7 @@ interceptor stacks is no different. In fact, we use exactly the same tag
 −
 
 ```
-<action name = "hello" class = "com.tutorialspoint.struts2.MyAction">
+<action name = "hello" class = "com.fenago.struts2.MyAction">
    <interceptor-ref name = "basicStack"/>
    <result>view.jsp</result>
 </action

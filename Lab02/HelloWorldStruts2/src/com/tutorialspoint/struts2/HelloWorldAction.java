@@ -1,4 +1,4 @@
-package com.tutorialspoint.struts2;
+package com.fenago.struts2;
 
 import com.opensymphony.xwork2.ActionSupport;
 

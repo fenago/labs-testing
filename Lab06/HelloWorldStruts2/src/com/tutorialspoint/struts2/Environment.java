@@ -1,4 +1,4 @@
-package com.tutorialspoint.struts2;
+package com.fenago.struts2;
 
 public class Environment {
    private String name;

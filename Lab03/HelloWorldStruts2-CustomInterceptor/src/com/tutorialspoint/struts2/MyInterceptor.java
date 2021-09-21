@@ -1,4 +1,4 @@
-package com.tutorialspoint.struts2;
+package com.fenago.struts2;
 
 import java.util.*;
 import com.opensymphony.xwork2.ActionInvocation;

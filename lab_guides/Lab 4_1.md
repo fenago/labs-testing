@@ -97,7 +97,7 @@ Next, let us modify the **struts.xml** to specify the result as follows
    <package name = "helloworld" extends = "struts-default">
 
       <action name = "hello" 
-         class = "com.tutorialspoint.struts2.HelloWorldAction"
+         class = "com.fenago.struts2.HelloWorldAction"
          method = "execute">
          <result name = "success" type = "freemarker">
             <param name = "location">/hello.fm</param>
@@ -145,7 +145,7 @@ XML −
 
 ```
 <action name = "hello" 
-   class = "com.tutorialspoint.struts2.HelloWorldAction"
+   class = "com.fenago.struts2.HelloWorldAction"
    method = "execute">
    <result name = "success" type = "redirect">
       <param name = "location">
@@ -159,6 +159,6 @@ So just modify your struts.xml file to define redirect type as mentioned
 above and create a new file NewWorld.jpg where you will be redirected
 whenever hello action will return success. You can check [Struts 2
 Redirect
-Action](https://www.tutorialspoint.com/struts_2/struts_redirect_action.htm)
+Action](https://www.fenago.com/struts_2/struts_redirect_action.htm)
 example for better understanding.
 

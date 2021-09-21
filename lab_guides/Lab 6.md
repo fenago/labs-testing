@@ -36,7 +36,7 @@ before displaying. Consider the following POJO class
 **Environment.java**.
 
 ```
-package com.tutorialspoint.struts2;
+package com.fenago.struts2;
 
 public class Environment {
    private String name;
@@ -68,7 +68,7 @@ configuration.
 Let us have the following action class −
 
 ```
-package com.tutorialspoint.struts2;
+package com.fenago.struts2;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class SystemDetails extends ActionSupport {
@@ -136,7 +136,7 @@ string \"**SUCCESS**\".
    <package name = "helloworld" extends = "struts-default">
       
       <action name = "system" 
-            class = "com.tutorialspoint.struts2.SystemDetails" 
+            class = "com.fenago.struts2.SystemDetails" 
             method = "execute">
          <result name = "success">/System.jsp</result>
       </action>
@@ -166,7 +166,7 @@ To resolve this problem, let us now create and register a simple
 Create a class called **EnvironmentConverter.java** with the following.
 
 ```
-package com.tutorialspoint.struts2;
+package com.fenago.struts2;
 
 import java.util.Map;
 import org.apache.struts2.util.StrutsTypeConverter;
@@ -203,7 +203,7 @@ In our case, we create a file called
 entry −
 
 ```
-environment = com.tutorialspoint.struts2.EnvironmentConverter
+environment = com.fenago.struts2.EnvironmentConverter
 ```
 
 In the above example, \"environment\" is the name of the property in the
@@ -217,8 +217,8 @@ application. To do this, create a property file called
 the following line
 
 ```
-com.tutorialspoint.struts2.Environment = \
-   com.tutorialspoint.struts2.EnvironmentConverter
+com.fenago.struts2.Environment = \
+   com.fenago.struts2.EnvironmentConverter
 ```
 
 This simply registers the converter globally, so that **Struts** can

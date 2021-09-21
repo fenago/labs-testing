@@ -8,7 +8,7 @@
    <package name = "helloworld" extends = "struts-default">
 
       <action name = "empinfo" 
-         class = "com.tutorialspoint.struts2.Employee"
+         class = "com.fenago.struts2.Employee"
          method = "execute">
          <result name = "input">/index.jsp</result>
          <result name = "success">/success.jsp</result>

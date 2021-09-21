@@ -15,7 +15,7 @@ XML −
 
 ```
 <action name = "hello" 
-   class = "com.tutorialspoint.struts2.HelloWorldAction"
+   class = "com.fenago.struts2.HelloWorldAction"
    method = "execute">
    <result name = "success" type = "redirect">
        <param name = "location">
@@ -39,7 +39,7 @@ define redirect type as mentioned above −
    <package name = "helloworld" extends = "struts-default">
 
       <action name = "hello" 
-         class = "com.tutorialspoint.struts2.HelloWorldAction"
+         class = "com.fenago.struts2.HelloWorldAction"
          method = "execute">
          <result name = "success" type = "redirect">
             <param name = "location">
@@ -95,7 +95,7 @@ Create action class file **Java Resources/src/HelloWorldAction.java** as
 follows −
 
 ```
-package com.tutorialspoint.struts2;
+package com.fenago.struts2;
 
 import com.opensymphony.xwork2.ActionSupport;
 

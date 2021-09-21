@@ -44,7 +44,7 @@ Create Action Class
 Action class is the key to Struts 2 application and we implement most of
 the business logic in action class. So let us create a java file
 HelloWorldAction.java under **Java Resources \> src** with a package
-name **com.tutorialspoint.struts2** with the contents given below.
+name **com.fenago.struts2** with the contents given below.
 
 The Action class responds to a user action when user clicks a URL. One
 or more of the Action class\'s methods are executed and a String result
@@ -52,7 +52,7 @@ is returned. Based on the value of the result, a specific JSP page is
 rendered.
 
 ```
-package com.tutorialspoint.struts2;
+package com.fenago.struts2;
 
 public class HelloWorldAction {
    private String name;
@@ -176,7 +176,7 @@ explorer and select **New \> Folder**. Your struts.xml should look like
    
    <package name = "helloworld" extends = "struts-default">
      <action name = "hello" 
-         class = "com.tutorialspoint.struts2.HelloWorldAction" 
+         class = "com.fenago.struts2.HelloWorldAction" 
          method = "execute">
          <result name = "success">/HelloWorld.jsp</result>
       </action>
@@ -289,7 +289,7 @@ how you can define index as an action −
       </action>
 
       <action name = "hello" 
-         class = "com.tutorialspoint.struts2.HelloWorldAction" 
+         class = "com.fenago.struts2.HelloWorldAction" 
          method = "execute">
          <result name = "success">/HelloWorld.jsp</result>
       </action>

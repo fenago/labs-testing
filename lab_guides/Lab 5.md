@@ -90,7 +90,7 @@ Make sure that your action class extends the **ActionSupport** class,
 otherwise your validate method will not be executed.
 
 ```
-package com.tutorialspoint.struts2;
+package com.fenago.struts2;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -154,7 +154,7 @@ configuration file as follows −
    <package name = "helloworld" extends = "struts-default">
 
       <action name = "empinfo" 
-         class = "com.tutorialspoint.struts2.Employee"
+         class = "com.fenago.struts2.Employee"
          method = "execute">
          <result name = "input">/index.jsp</result>
          <result name = "success">/success.jsp</result>
@@ -289,7 +289,7 @@ file. Let us have our Employee action class as follows without having
 **validate()** method −
 
 ```
-package com.tutorialspoint.struts2;
+package com.fenago.struts2;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -333,5 +333,5 @@ There are plenty more validators that come by default with Struts.
 Common validators include Date Validator, Regex validator and String
 Length validator. Check the following link for more detail [Struts - XML
 Based
-Validators](https://www.tutorialspoint.com/struts_2/xml_based_validators.htm).
+Validators](https://www.fenago.com/struts_2/xml_based_validators.htm).
 

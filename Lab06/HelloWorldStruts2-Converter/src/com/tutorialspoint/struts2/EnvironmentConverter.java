@@ -1,4 +1,4 @@
-package com.tutorialspoint.struts2;
+package com.fenago.struts2;
 
 import java.util.Map;
 import org.apache.struts2.util.StrutsTypeConverter;
