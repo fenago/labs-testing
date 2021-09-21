@@ -7,7 +7,7 @@ class MyAction extends ActionSupport {
    public static String BAD = ERROR;
 }
 
-public class HelloWorldAction extends ActionSupport {
+public class HelloWorld extends ActionSupport {
    private String name;
 
    public String execute() {
@@ -15,22 +15,6 @@ public class HelloWorldAction extends ActionSupport {
       return MyAction.BAD;
    }
    
-   public String getName() {
-      return name;
-   }
-
-   public void setName(String name) {
-      this.name = name;
-   }
-}
-
-public class SomeOtherClass extends ActionSupport {
-   private String name;
-
-   public String execute() {
-      return MyAction.GOOD;
-   }
-
    public String getName() {
       return name;
    }
