@@ -16,5 +16,13 @@
          <input type = "text" name = "name"/>
          <input type = "submit" value = "Say Hello"/>
       </form>
+
+      <h1>Something From Struts2</h1>
+      <form action = "something">
+         <label for = "name">Please enter your name</label><br/>
+         <input type = "text" name = "name"/>
+         <input type = "submit" value = "Say Something"/>
+      </form>
+
    </body>
 </html>
