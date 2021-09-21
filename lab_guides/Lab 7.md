@@ -17,7 +17,7 @@ We have used these tags in our examples already, we will brush them in
 this chapter. Let us look a simple view page **email.jsp** with several
 simple UI tags −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <%@ page language = "java" contentType = "text/html; charset = ISO-8859-1"
    pageEncoding = "ISO-8859-1"%>
 <%@ taglib prefix = "s" uri = "/struts-tags"%>
@@ -56,7 +56,7 @@ tags with an additional prefix **s:** along with each tag and different
 attributes. When we execute the above program, we get the following user
 interface provided you have setup proper mapping for all the keys used.
 
-![Struts Simple UI tags](./Lab%207_files/simpleuitag.jpg)
+![](./images/simpleuitag.jpg)
 
 As shown, the s:head generates the javascript and stylesheet elements
 required for the Struts2 application.
@@ -118,7 +118,7 @@ The group UI tags are used to create radio button and the checkbox. Let
 us look a simple view page **HelloWorld.jsp** with check box and radio
 button tags −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <%@ page contentType = "text/html; charset = UTF-8"%>
 <%@ taglib prefix = "s" uri = "/struts-tags"%>
 
@@ -142,7 +142,7 @@ button tags −
 When we execute the above program, our output will look similar to the
 following −
 
-![Struts group UI tags](./Lab%207_files/sturtsgrouptag.jpg)
+![](./images/sturtsgrouptag.jpg)
 
 Let us look at the example now. In the first example, we are creating a
 simple radio button with the label \"Gender\". The name attribute is
@@ -164,7 +164,7 @@ Let us explore the different variations of the Select Tag offered by
 Struts. Let us look a simple view page **HelloWorld.jsp** with select
 tags −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <%@ page contentType = "text/html; charset = UTF-8"%>
 <%@ taglib prefix = "s" uri = "/struts-tags"%>
 
@@ -202,7 +202,7 @@ tags −
 When we execute the above program our output will look similar to the
 following −
 
-![Struts select UI tags](./Lab%207_files/sturtsselecttag.jpg)
+![](./images/sturtsselecttag.jpg)
 
 Let us now go through the individual cases, one by one.
 

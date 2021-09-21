@@ -29,7 +29,7 @@ Create Main Page
 Let us write main page JSP file **index.jsp**, which will be used to
 collect Employee related information mentioned above.
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <%@ page language = "java" contentType = "text/html; charset = ISO-8859-1"
    pageEncoding = "ISO-8859-1"%>
 <%@ taglib prefix = "s" uri = "/struts-tags"%>
@@ -63,7 +63,7 @@ Create Views
 We will use JSP file success.jsp which will be invoked in case defined
 action returns SUCCESS.
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <%@ page language = "java" contentType = "text/html; charset = ISO-8859-1"
    pageEncoding = "ISO-8859-1"%>
 <%@ taglib prefix = "s" uri = "/struts-tags"%>
@@ -89,7 +89,7 @@ method called **validate()** as shown below in **Employee.java** file.
 Make sure that your action class extends the **ActionSupport** class,
 otherwise your validate method will not be executed.
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 package com.tutorialspoint.struts2;
 
 import com.opensymphony.xwork2.ActionSupport;
@@ -143,7 +143,7 @@ Configuration Files
 Finally, let us put everything together using the **struts.xml**
 configuration file as follows −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <?xml version = "1.0" Encoding = "UTF-8"?>
 <!DOCTYPE struts PUBLIC
    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
@@ -166,7 +166,7 @@ configuration file as follows −
 
 Following is the content of **web.xml** file −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <?xml version = "1.0" Encoding = "UTF-8"?>
 <web-app xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
    xmlns = "http://java.sun.com/xml/ns/javaee"
@@ -201,18 +201,18 @@ directory. Finally, start Tomcat server and try to access URL
 **http://localhost:8080/HelloWorldStruts2/index.jsp**. This will produce
 the following screen −
 
-![Email User Input](./Lab%205_files/helloworldstruts12.jpg)
+![](./images/helloworldstruts12.jpg)
 
 Now do not enter any required information, just click on **Submit**
 button. You will see the following result −
 
-![Error](./Lab%205_files/helloworldstruts121.jpg)
+![](./images/helloworldstruts121.jpg)
 
 Enter the required information but enter a wrong From field, let us say
 name as \"test\" and age as 30, and finally click on **Submit** button.
 You will see the following result −
 
-![Success](./Lab%205_files/helloworldstruts122.jpg)
+![](./images/helloworldstruts122.jpg)
 
 How this Validation Works?
 --------------------------
@@ -234,14 +234,14 @@ method call. The addFieldError method takes two arguments. The first, is
 the **form** field name to which the error applies and the second, is
 the error message to display above that form field.
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 addFieldError("name","The name is required");
 ```
 
 To handle the return value of **input** we need to add the following
 result to our action node in **struts.xml**.
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <result name = "input">/index.jsp</result>
 ```
 
@@ -258,7 +258,7 @@ The xml file needs to be named **\'\[action-class\]\'-validation.xml**.
 So, in our case we create a file called **Employee-validation.xml** with
 the following contents −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <!DOCTYPE validators PUBLIC 
    "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
    "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
@@ -288,7 +288,7 @@ Above XML file would be kept in your CLASSPATH ideally along with class
 file. Let us have our Employee action class as follows without having
 **validate()** method −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 package com.tutorialspoint.struts2;
 
 import com.opensymphony.xwork2.ActionSupport;

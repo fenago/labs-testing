@@ -45,7 +45,7 @@ HTML page, and so on, on the server. It uses the
 We saw the \"shorthand\" version in our earlier examples, where we
 provided a JSP path as the body of the result tag.
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <result name = "success">
    /HelloWorld.jsp
 </result>
@@ -54,7 +54,7 @@ provided a JSP path as the body of the result tag.
 We can also specify the JSP file using a \<param name = \"location\"\>
 tag within the \<result\...\> element as follows −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <result name = "success" type = "dispatcher">
    <param name = "location">
       /HelloWorld.jsp
@@ -75,7 +75,7 @@ to generate output using predefined templates. Let us now create a
 Freemaker template file called **hello.fm** with the following contents
 −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 Hello World ${name}
 ```
 
@@ -86,7 +86,7 @@ your CLASSPATH.
 Next, let us modify the **struts.xml** to specify the result as follows
 −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <?xml version = "1.0" Encoding = "UTF-8"?>
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
@@ -120,12 +120,12 @@ Tomcat server and try to access URL
 **http://localhost:8080/HelloWorldStruts2/index.jsp**. This will produce
 the following screen .
 
-![Hello World Struts 4](./Lab%204_1_files/helloworldstruts4.jpg)
+![](./images/helloworldstruts4.jpg)
 
 Enter a value \"Struts2\" and submit the page. You should see the next
 page.
 
-![Hello World Struts 5](./Lab%204_1_files/helloworldstruts5.jpg)
+![](./images/helloworldstruts5.jpg)
 
 As you can see, this is exactly same as the JSP view except that we are
 not tied to using JSP as the view technology. We have used Freemaker in
@@ -143,7 +143,7 @@ element or as a \<param name = \"location\"\> element. Redirect also
 supports the **parse** parameter. Here\'s an example configured using
 XML −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <action name = "hello" 
    class = "com.tutorialspoint.struts2.HelloWorldAction"
    method = "execute">

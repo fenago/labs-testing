@@ -28,7 +28,7 @@ Optionally you can extend the **ActionSupport** class which implements
 six interfaces including **Action** interface. The Action interface is
 as follows −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 public interface Action {
    public static final String SUCCESS = "success";
    public static final String NONE = "none";
@@ -41,7 +41,7 @@ public interface Action {
 
 Let us take a look at the action method in the Hello World example −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 package com.tutorialspoint.struts2;
 
 public class HelloWorldAction {
@@ -65,7 +65,7 @@ To illustrate the point that the action method controls the view, let us
 make the following change to the **execute** method and extend the class
 ActionSupport as follows −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 package com.tutorialspoint.struts2;
 
 import com.opensymphony.xwork2.ActionSupport;
@@ -98,7 +98,7 @@ result. Because we have extended ActionSupport, so we can use String
 constants **SUCCESS** and ERROR. Now, let us modify our struts.xml file
 as follows −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <?xml version = "1.0" Encoding = "UTF-8"?>
 <!DOCTYPE struts PUBLIC
    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
@@ -126,7 +126,7 @@ WebContent folder in the project explorer and select **New \>JSP File**.
 This file will be called in case return result is SUCCESS which is a
 String constant \"success\" as defined in Action interface −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <%@ page contentType = "text/html; charset = UTF-8" %>
 <%@ taglib prefix = "s" uri = "/struts-tags" %>
 
@@ -145,7 +145,7 @@ Following is the file which will be invoked by the framework in case
 action result is ERROR which is equal to String constant \"error\".
 Following is the content of **AccessDenied.jsp**
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <%@ page contentType = "text/html; charset = UTF-8" %>
 <%@ taglib prefix = "s" uri = "/struts-tags" %>
 
@@ -165,7 +165,7 @@ will serve as the initial action URL where the user can click to tell
 the Struts 2 framework to call the **execute**method of the
 HelloWorldAction class and render the HelloWorld.jsp view.
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <%@ page language = "java" contentType = "text/html; charset = ISO-8859-1"
    pageEncoding = "ISO-8859-1"%>
 <%@ taglib prefix = "s" uri = "/struts-tags"%>
@@ -202,17 +202,17 @@ directory. Finally, start Tomcat server and try to access URL
 **http://localhost:8080/HelloWorldStruts2/index.jsp**. This will give
 you following screen −
 
-![Hello World Struts4](./Lab%202_files/helloworldstruts4.jpg)
+![](./images/helloworldstruts4.jpg)
 
 Let us enter a word as \"SECRET\" and you should see the following page
 −
 
-![helloworldstruts51](./Lab%202_files/helloworldstruts51.jpg)
+![](./images/helloworldstruts51.jpg)
 
 Now enter any word other than \"SECRET\" and you should see the
 following page −
 
-![helloworldstruts6](./Lab%202_files/helloworldstruts6.jpg)
+![](./images/helloworldstruts6.jpg)
 
 Create Multiple Actions
 -----------------------
@@ -221,7 +221,7 @@ You will frequently define more than one actions to handle different
 requests and to provide different URLs to the users, accordingly you
 will define different classes as defined below −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 package com.tutorialspoint.struts2;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -250,7 +250,7 @@ public class SomeOtherClass extends ActionSupport {
 
 You will configure these actions in struts.xml file as follows −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <?xml version = "1.0" Encoding = "UTF-8"?>
 <!DOCTYPE struts PUBLIC
    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"

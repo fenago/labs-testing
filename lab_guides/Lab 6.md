@@ -35,7 +35,7 @@ your own converters to make Struts aware how to convert those values
 before displaying. Consider the following POJO class
 **Environment.java**.
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 package com.tutorialspoint.struts2;
 
 public class Environment {
@@ -67,7 +67,7 @@ configuration.
 
 Let us have the following action class −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 package com.tutorialspoint.struts2;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -100,7 +100,7 @@ public class SystemDetails extends ActionSupport {
 Next, let us create a simple JSP file **System.jsp** to display the
 Environment and the Operating System information.
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <%@ page language = "java" contentType = "text/html; charset = ISO-8859-1"
 pageEncoding = "ISO-8859-1"%>
 <%@ taglib prefix = "s" uri = "/struts-tags"%>
@@ -125,7 +125,7 @@ together using **struts.xml**.
 The SystemDetails class has a simple execute () method that returns the
 string \"**SUCCESS**\".
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <?xml version = "1.0" Encoding = "UTF-8"?>
 <!DOCTYPE struts PUBLIC
    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
@@ -153,7 +153,7 @@ string \"**SUCCESS**\".
     **http://localhost:8080/HelloWorldStruts2/system.action**. This will
     produce the following screen −
 
-![System Info](./Lab%206_files/helloworldstruts17.gif)
+![](./images/helloworldstruts17.gif)
 
 What is wrong with the above output? Struts knows how to display and
 convert the string \"Windows XP SP3\" and other built-in data types, but
@@ -165,7 +165,7 @@ To resolve this problem, let us now create and register a simple
 
 Create a class called **EnvironmentConverter.java** with the following.
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 package com.tutorialspoint.struts2;
 
 import java.util.Map;
@@ -202,7 +202,7 @@ In our case, we create a file called
 **SystemDetails-converstion.properties** with the following registration
 entry −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 environment = com.tutorialspoint.struts2.EnvironmentConverter
 ```
 
@@ -216,7 +216,7 @@ application. To do this, create a property file called
 **xwork-conversion.properties** in the **WEBINF/classes** folder with
 the following line
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 com.tutorialspoint.struts2.Environment = \
    com.tutorialspoint.struts2.EnvironmentConverter
 ```
@@ -226,7 +226,7 @@ automatically do the conversion every time when it encounters an object
 of the type Environment. Now, if you re-compiling and re-running the
 program, then you will get a better output as follows −
 
-![System Info](./Lab%206_files/helloworldstruts18.gif)
+![](./images/helloworldstruts18.gif)
 
 Obviously, now the result will be better which means our Struts
 convertor is working fine.

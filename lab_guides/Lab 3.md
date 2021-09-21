@@ -160,7 +160,7 @@ We will keep HelloWorldAction.java, web.xml, HelloWorld.jsp and
 index.jsp files as they have been created in **Examples** chapter but
 let us modify the **struts.xml** file to add an interceptor as follows −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <?xml version = "1.0" Encoding = "UTF-8"?>
 <!DOCTYPE struts PUBLIC
    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
@@ -186,13 +186,13 @@ directory. Finally, start Tomcat server and try to access URL
 **http://localhost:8080/HelloWorldStruts2/index.jsp**. This will produce
 the following screen −
 
-![Hello World Struts 4](./Lab%203_files/helloworldstruts4.jpg)
+![](./images/helloworldstruts4.jpg)
 
 Now enter any word in the given text box and click Say Hello button to
 execute the defined action. Now if you will check the log generated, you
 will find the following text −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 INFO: Server startup in 3539 ms
 27/08/2011 8:40:53 PM 
 com.opensymphony.xwork2.util.logging.commons.CommonsLogger info
@@ -210,7 +210,7 @@ provide crosscutting application features. Creating a custom interceptor
 is easy; the interface that needs to be extended is the following
 **Interceptor** interface −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 public interface Interceptor extends Serializable {
    void destroy();
    void init();
@@ -238,7 +238,7 @@ Create Interceptor Class
 Let us create the following MyInterceptor.java in **Java Resources \>
 src** folder −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 package com.tutorialspoint.struts2;
 
 import java.util.*;
@@ -277,7 +277,7 @@ the invoke() method will cause the action itself to be executed.
 
 The following diagram shows the same concept through a request flow −
 
-![ActionInvocation](./Lab%203_files/actioninvocation.jpg)
+![](./images/actioninvocation.jpg)
 
 Create Action Class
 -------------------
@@ -286,7 +286,7 @@ Let us create a java file HelloWorldAction.java under **Java Resources
 \> src** with a package name **com.tutorialspoint.struts2** with the
 contents given below.
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 package com.tutorialspoint.struts2;
 
 import com.opensymphony.xwork2.ActionSupport;
@@ -319,7 +319,7 @@ Create a View
 Let us create the below jsp file **HelloWorld.jsp** in the WebContent
 folder in your eclipse project.
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <%@ page contentType = "text/html; charset = UTF-8" %>
 <%@ taglib prefix = "s" uri = "/struts-tags" %>
 
@@ -342,7 +342,7 @@ will serve as the initial action URL where a user can click to tell the
 Struts 2 framework to call the a defined method of the HelloWorldAction
 class and render the HelloWorld.jsp view.
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <%@ page language = "java" contentType = "text/html; charset = ISO-8859-1"
    pageEncoding = "ISO-8859-1"%>
 <%@ taglib prefix = "s" uri = "/struts-tags"%>
@@ -378,7 +378,7 @@ placed directly under the \<package\> tag ins**struts.xml** file. You
 can skip this step for a default interceptors as we did in our previous
 example. But here let us register and use it as follows −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <?xml version = "1.0" Encoding = "UTF-8"?>
 <!DOCTYPE struts PUBLIC
    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
@@ -413,7 +413,7 @@ interceptor with the different actions.
 The web.xml file needs to be created under the WEB-INF folder under
 WebContent as follows −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <?xml version = "1.0" Encoding = "UTF-8"?>
 <web-app xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
    xmlns = "http://java.sun.com/xml/ns/javaee" 
@@ -448,13 +448,13 @@ directory. Finally, start Tomcat server and try to access URL
 **http://localhost:8080/HelloWorldStruts2/index.jsp**. This will produce
 the following screen −
 
-![Hello World Struts 4](./Lab%203_files/helloworldstruts4.jpg)
+![](./images/helloworldstruts4.jpg)
 
 Now enter any word in the given text box and click Say Hello button to
 execute the defined action. Now if you will check the log generated, you
 will find the following text at the bottom −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 Pre-Processing
 Inside action....
 Post-Processing
@@ -468,7 +468,7 @@ action would quickly become extremely unmanageable. For this reason,
 interceptors are managed with interceptor stacks. Here is an example,
 directly from the strutsdefault.xml file −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <interceptor-stack name = "basicStack">
    <interceptor-ref name = "exception"/>
    <interceptor-ref name = "servlet-config"/>
@@ -492,7 +492,7 @@ We have already seen how to apply interceptor to the action, applying
 interceptor stacks is no different. In fact, we use exactly the same tag
 −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <action name = "hello" class = "com.tutorialspoint.struts2.MyAction">
    <interceptor-ref name = "basicStack"/>
    <result>view.jsp</result>

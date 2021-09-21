@@ -13,7 +13,7 @@ element or as a \<param name = \"location\"\> element. Redirect also
 supports the **parse** parameter. Here\'s an example configured using
 XML −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <action name = "hello" 
    class = "com.tutorialspoint.struts2.HelloWorldAction"
    method = "execute">
@@ -28,7 +28,7 @@ XML −
 So just modify your **WebContent/WEB-INF/classes/struts.xml** file to
 define redirect type as mentioned above −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <?xml version = "1.0" Encoding = "UTF-8"?>
 <!DOCTYPE struts PUBLIC
     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
@@ -61,7 +61,7 @@ whenever your action retruns \"success\". Let us keep
 **WebContent/WEB-INF/lib/web.xml** without any change, so its content
 will be as follows −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <?xml version = "1.0" Encoding = "UTF-8"?>
 <web-app xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
    xmlns = "http://java.sun.com/xml/ns/javaee" 
@@ -94,7 +94,7 @@ will be as follows −
 Create action class file **Java Resources/src/HelloWorldAction.java** as
 follows −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 package com.tutorialspoint.struts2;
 
 import com.opensymphony.xwork2.ActionSupport;
@@ -119,7 +119,7 @@ public class HelloWorldAction extends ActionSupport{
 Let create main page **WebContent/WEB-INF/index.jsp** with the following
 content −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <%@ page language = "java" contentType = "text/html; charset = ISO-8859-1"
    pageEncoding = "ISO-8859-1"%>
 <%@ taglib prefix = "s" uri = "/struts-tags"%>
@@ -144,7 +144,7 @@ content −
 Let us create **WebContent/WEB-INF/NewWorld.jsp** where request will be
 redirected in case action returns \"success\" −
 
-``` {.prettyprint .notranslate .prettyprinted style=""}
+```
 <%@ page language = "java" contentType = "text/html; charset = ISO-8859-1"
    pageEncoding = "ISO-8859-1"%>
 <%@ taglib prefix = "s" uri = "/struts-tags"%>
@@ -167,7 +167,7 @@ directory. Finally, start Tomcat server and try to access URL
 http://localhost:8080/HelloWorldStruts2/index.action. This will give you
 following screen −
 
-![Page Redirection Example](./Lab%204_2_files/helloworldstruts4.jpg)
+![](./images/helloworldstruts4.jpg)
 
 Enter any value in the text box and submit the page. You should see the
 next page after redirection −
